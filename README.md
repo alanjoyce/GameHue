@@ -25,4 +25,6 @@ The script will check if you are playing a game on Steam, then do the same for X
 
 You can configure IFTTT to do whatever you'd like in response to these webhooks, but the intent is that you set it to change various lights in your home to the primary/secondary/tertiary colors.
 
+You may also want to set up a cron job to run this script every minute or so. With that cadence, your lights will typically change before most games have finished loading. Magical!
+
 Have fun!
