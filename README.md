@@ -1,5 +1,12 @@
 # GameHue
-Automatically change Hue lights to match the poster art of the game you're currently playing.
+GameHue automatically changes your Hue (or similar) lights to match the poster art of the game you're currently playing.
+
+It does this by:
+1. Checking your Steam and Xbox accounts to see if you're playing a game.
+2. If so, fetching the game's store image and sending it to the Google Cloud Vision API to assess dominant colors.
+3. Sending the dominant colors to IFTTT, which can then be configured to change your lights (via Hue or another service) to match these colors.
+
+Note: PlayStation is not yet supported because I couldn't find a way to retrieve your current PSN game from the web.
 
 # Configuration
 
