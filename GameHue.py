@@ -38,14 +38,13 @@ if gameImage is None:
       gameImage = json_data["Items"][0]["Images"][0]["Url"]
       print "Found an Xbox game: " + gameImage
 
-# If we didn't find an Xbox game, look for a PlayStation game
-if gameImage is None:
-  # We never find any PlayStation games because there's no API
-  print "No games found."
-  exit()
+# TODO: If we didn't find an Xbox game, look for a PlayStation game
+# Right now, we never find any PlayStation games because there's no API
 
 # If we didn't find any game, then we shouldn't do anything else
 if gameImage is None:
+  # Clear the lastgame file to reflect current state
+  open('lastgame.txt', 'w').close()
   print "No games found."
   exit()
 
@@ -57,7 +56,7 @@ if lastGame == gameImage + "\n":
   print "The found game was the same game as last time. Skipping."
   exit()
 else:
-  # Clear the file
+  # Clear the file before updating it
   open('lastgame.txt', 'w').close()
   #Write the new name
   f = open('lastgame.txt', 'w')
