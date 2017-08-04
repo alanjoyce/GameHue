@@ -1,0 +1,15 @@
+# Google Cloud API key
+: google_key YOUR_KEY
+
+# Xbox API key
+: xbox_key YOUR_KEY
+# Xbox user ID
+: xbox_user YOUR_USER_ID
+
+# Steam API key
+: steam_key YOUR_KEY
+# Steam user ID
+: steam_user YOUR_USER_ID
+
+# IFTTT Webhooks key
+: ifttt_key YOUR_KEY
