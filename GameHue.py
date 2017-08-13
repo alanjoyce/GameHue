@@ -58,20 +58,21 @@ if lastGame == gameImage + "\n":
 else:
   # Clear the file before updating it
   open('lastgame.txt', 'w').close()
-  #Write the new name
-  f = open('lastgame.txt', 'w')
-  f.write(gameImage)
 
 # Import color overrides
 dominantColors = []
-fOver = open('overrides.txt', 'r')
-for line in fOver:
+f = open('overrides.txt', 'r')
+for line in f:
   linePieces = line.split()
   if gameID == linePieces[0]:
     dominantColors.append(linePieces[1])
     dominantColors.append(linePieces[2])
     dominantColors.append(linePieces[3])
-fOver.close()
+f.close()
+  
+# Keep a record of the new game
+f = open('lastgame.txt', 'w')
+f.write(gameImage + "\n")
 
 # If we don't have a color override, dynamically find colors
 if len(dominantColors) == 0:
