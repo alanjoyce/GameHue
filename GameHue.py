@@ -36,7 +36,7 @@ if gameImage is None:
       r = requests.get("https://xboxapi.com/v2/game-details-hex/" + gameID, headers=headers, verify=False)
       json_data = r.json()
       gameImage = json_data["Items"][0]["Images"][0]["Url"]
-      print "Found an Xbox game: " + gameImage
+      print "Found an Xbox game (ID=" + gameID + "): " + gameImage
 
 # TODO: If we didn't find an Xbox game, look for a PlayStation game
 # Right now, we never find any PlayStation games because there's no API
