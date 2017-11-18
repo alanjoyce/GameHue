@@ -1,2 +1,3 @@
 3425c168 #dd0000 #000000 #000000 //Amazon Video
 570 #e2240b #2bdb04 #219b03 //Dota 2
+236870 #ff1111 #ee11aa #ee1111 //HITMAN PC
